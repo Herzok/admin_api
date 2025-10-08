@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<div class='content'>
+    <h1>Профиль</h1>
+    {% include "users/form-errors.html" %}
+    <img src="{% if user.image %} {{ user.image.url }}{% else %}{{ '/media/users/image/base_avater.png' }}{% endif %}" width="300" height="200"/>
+    <form class='form' enctype="multipart/form-data" action="{% url "users:profile" %}" method="post">
+        {% csrf_token %}
+        {% for item in form %}
+            <div>
+                <label for="{{ item.id_for_label }}">{{ item.label }}</label>
+                {{ item }}
+            </div>
+        {% endfor %}
+        <input type="submit" value="Изменить профиль">
+    </form>
+    <form method="post" action="{% url 'users:delete' %}">
+        {% csrf_token %}
+        <button type="submit">Удалить аккаунт</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'scp_objects/css/styles.css' %}">
+{% endblock %}
+{% block body %}
+    <div class="content">
+            {% for item in object_list %}
+                <div class="item-obj">
+                    <span> {{ item.name }}</span>
+                    </br>
+                    <a href="{% url 'users:edit-role' item.name %}" class="btn_a">Редактировать</a>
+                    <form method="post" action="{% url 'users:delete-role' item.name %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn_a_d">Удалить</button>
+                    </form>
+                </div>
+            {% endfor %}
+    </div>
+
+{% endblock %}

@@ -1,0 +1,42 @@
+.reg-content, .login-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 15pt;
+    font-family: "Verdana";
+    background-image: url("/media/users/image/background-reg.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: overlay;
+}
+
+
+h2, h1 {
+    font-family: "Verdana";
+    color: black;
+    margin: 100px;
+}
+
+.errors-reg-form, .errors-login-form {
+    background: rgb(213, 213, 213);
+    height: 200px;
+}
+
+.form {
+    border: 2px solid #1b1b1b;
+    padding: 20px;
+    background: rgb(213, 213, 213);
+    border-radius: 5px;
+}
+
+.error-list, .error {
+  color: #b30000;
+  background: #ffe6e6;
+  border: 1px solid #b30000;
+  padding: 5px 10px;
+  margin: 5px 0;
+  border-radius: 4px;
+}

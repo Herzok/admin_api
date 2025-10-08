@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/jpg" href="/media/base/image/logo.jpg">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{% static 'base/css/base_styles.css' %}">
+    {% block css %}
+    {% endblock %}
+    {% block scripts %}
+    {% endblock %}
+</head>
+<body>
+{% include "menu.html" %}
+{% block body %}
+{% endblock %}
+
+</body>
+</html>

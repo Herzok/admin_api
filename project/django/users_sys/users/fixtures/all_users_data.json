@@ -1,0 +1,170 @@
+[
+{
+  "model": "users.permission",
+  "pk": 1,
+  "fields": {
+    "code": "delete_user",
+    "name": "Удаление записи пользователя"
+  }
+},
+{
+  "model": "users.permission",
+  "pk": 2,
+  "fields": {
+    "code": "edit_profile",
+    "name": "Редактирование профиля"
+  }
+},
+{
+  "model": "users.permission",
+  "pk": 3,
+  "fields": {
+    "code": "create_perm",
+    "name": "Создать правило"
+  }
+},
+{
+  "model": "users.permission",
+  "pk": 4,
+  "fields": {
+    "code": "delete_perm",
+    "name": "Удалить правило"
+  }
+},
+{
+  "model": "users.permission",
+  "pk": 5,
+  "fields": {
+    "code": "edit_perm",
+    "name": "Редактировать правило"
+  }
+},
+{
+  "model": "users.permission",
+  "pk": 6,
+  "fields": {
+    "code": "read_perms",
+    "name": "Чтение правил"
+  }
+},
+{
+  "model": "users.permission",
+  "pk": 7,
+  "fields": {
+    "code": "create_post",
+    "name": "Создать пост"
+  }
+},
+{
+  "model": "users.permission",
+  "pk": 8,
+  "fields": {
+    "code": "edit_post",
+    "name": "Редактировать посты"
+  }
+},
+{
+  "model": "users.permission",
+  "pk": 9,
+  "fields": {
+    "code": "delete_post",
+    "name": "Удалять посты"
+  }
+},
+{
+  "model": "users.permission",
+  "pk": 10,
+  "fields": {
+    "code": "read_post",
+    "name": "Читать посты"
+  }
+},
+{
+  "model": "users.permission",
+  "pk": 11,
+  "fields": {
+    "code": "add_comment",
+    "name": "Добавить коментарий"
+  }
+},
+{
+  "model": "users.permission",
+  "pk": 12,
+  "fields": {
+    "code": "delete_comment",
+    "name": "Удалить комментарий"
+  }
+},
+{
+  "model": "users.permission",
+  "pk": 13,
+  "fields": {
+    "code": "edit_comment",
+    "name": "Редактировать комментарий"
+  }
+},
+{
+  "model": "users.role",
+  "pk": 1,
+  "fields": {
+    "name": "admin",
+    "permissions": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ]
+  }
+},
+{
+  "model": "users.role",
+  "pk": 2,
+  "fields": {
+    "name": "user",
+    "permissions": [
+      1,
+      2,
+      10
+    ]
+  }
+},
+{
+  "model": "users.customusers",
+  "pk": 1,
+  "fields": {
+    "login": "Herzok",
+    "password_hash": "pbkdf2_sha256$1000000$9Y1TCLUbWugTgQyl7dgj7l$NY5U8Teckpt72Wmyzcw9wQp9onEkoK0NU6xcOIDieL0=",
+    "first_name": "Юрий",
+    "last_name": "Лау-Сом-Бхеу",
+    "surname": "",
+    "email": "test@fckdrm.com",
+    "created_at": "2025-10-03T16:36:22.444Z",
+    "is_active": true,
+    "role": 1
+  }
+},
+{
+  "model": "users.customusers",
+  "pk": 4,
+  "fields": {
+    "login": "Rorschach",
+    "password_hash": "pbkdf2_sha256$1000000$pDU3lOIQw3u6l1k4yOmYmJ$uG4pIlpYsxDPyih1+cgg/0NfnDh8NWVbRmIS/VMCdG4=",
+    "first_name": "Дмитрий",
+    "last_name": "Тапкин",
+    "surname": "",
+    "email": "test1@fckdrm.com",
+    "created_at": "2025-10-08T11:14:21.929Z",
+    "is_active": true,
+    "role": 2
+  }
+}
+]

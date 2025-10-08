@@ -1,0 +1,23 @@
+<div class="top-menu">
+    <div class="menu-right">
+        <a class="menu-button" href="">На главную</a>
+        <a class="menu-button" href="{% url "forum:posts" %}">Список постов</a>
+    </div>
+    <div class="menu-left">
+        {% if user.is_authenticated %}
+            {% if user.role.name == 'admin' or user.role.name == 'superuser' %}
+                <div class="dropdown">
+                    <button class="menu-button dropdown-toggle">Админка ▾</button>
+                    <div class="dropdown-content">
+                        <a href="{% url 'users:list-roles' %}">Роли</a>
+                    </div>
+                </div>
+            {% endif %}
+            <a class="menu-button" href="{% url "users:profile" %}">Профиль</a>
+            <a class="menu-button" href="{% url "users:logout" %}">Выйти</a>
+        {% else %}
+            <a class="menu-button" href="{% url "users:reg" %}">Регистрация</a>
+            <a class="menu-button" href="{% url "users:login" %}">Зайти</a>
+        {% endif %}
+    </div>
+</div>

@@ -1,0 +1,119 @@
+html {
+    background-image: url("/media/base/image/background.png");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    margin: 0;
+}
+
+body {
+    box-shadow: 0 0 50px black;
+    background: rgb(213, 213, 213);
+    margin: 0 100px;
+}
+
+/* Верхнее меню*/
+
+.top-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 33px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(83, 83, 83, 1) 100%);
+}
+
+.menu-left, .menu-right {
+    align-items: stretch;
+    display: flex;
+}
+
+.menu-left a, .menu-right a, .dropdown {
+    margin: 0 5px;
+}
+
+/* Кнопка меню*/
+
+.menu-button {
+    font-size: 15.5pt;
+    font-family: "Verdana";
+    color: #e0e0e0;
+    padding: 3px;
+    transition: .2s linear;
+    background: linear-gradient(0deg, rgba(55, 55, 55, 1) 0%, rgba(102, 102, 102, 1) 100%);
+}
+
+.menu-button:hover {
+    color: #a8a8a8;
+    background: linear-gradient(0deg, rgba(57, 25, 25, 1) 0%, rgba(108, 50, 50, 1) 100%);
+}
+
+.menu-button:active {
+    color: #f6f6f6;
+    background: linear-gradient(0deg, rgba(113, 49, 49, 1) 0%, rgba(167, 73, 73, 1) 100%);
+}
+
+/* Контейнер выпадающего меню */
+.dropdown {
+    
+    position: relative;
+    display: inline-block;
+}
+
+/* Кнопка "Админка" */
+.dropdown-toggle {
+    border: none;
+    cursor: pointer;
+}
+
+/* Содержимое выпадающего меню */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(83, 83, 83, 1) 100%);
+    border: 1px solid #3a3a3a;
+    min-width: 160px;
+    z-index: 100;
+    top: 28px; /* ровно под меню */
+    left: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+/* Ссылки внутри меню */
+.dropdown-content a {
+    display: block;
+    font-size: 14pt;
+    font-family: "Verdana";
+    color: #e0e0e0;
+    padding: 0px 10px;
+    text-decoration: none;
+    background: linear-gradient(0deg, rgba(55, 55, 55, 1) 0%, rgba(102, 102, 102, 1) 100%);
+    transition: .2s linear;
+}
+
+/* Наведение на пункт */
+.dropdown-content a:hover {
+    color: #a8a8a8;
+    background: linear-gradient(0deg, rgba(57, 25, 25, 1) 0%, rgba(108, 50, 50, 1) 100%);
+}
+
+/* Клик или удержание */
+.dropdown-content a:active {
+    color: #f6f6f6;
+    background: linear-gradient(0deg, rgba(113, 49, 49, 1) 0%, rgba(167, 73, 73, 1) 100%);
+}
+
+/* Показываем меню при наведении */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Чтобы стрелка выглядела как часть кнопки */
+.dropdown-toggle::after {
+    content: '';
+}

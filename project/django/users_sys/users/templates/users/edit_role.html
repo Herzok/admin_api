@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'scp_objects/css/styles.css' %}">
+{% endblock %}
+
+{% block body %}
+<h2>Редактирование роли: {{ title }}</h2>
+{% include "users/form-errors.html" %}
+<form class='desc-obj' method="post">
+    {% csrf_token %}
+    <h3>Права роли:</h3>
+    {% for field in form.permissions %}
+        <div>
+            {{ field }} {{ field.label }}
+        </div>
+    {% endfor %}
+    <button type="submit">Сохранить</button>
+</form>
+{% endblock %}
